@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Acomodações — Pousada MontVerde | Itanhangá, Rio de Janeiro</title>
+<meta name="description" content="16 unidades habitacionais na Pousada MontVerde: quartos para casais, famílias e grupos no Itanhangá, Rio de Janeiro.">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MXDKKWH3');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MXDKKWH3" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<header class="hdr hero-mode" id="hdr">
+  <div class="hdr-inner">
+    <a href="../index.html" class="logo">MontVerde</a>
+    <nav class="nav">
+      <a href="../sobre/">Sobre</a>
+      <a href="../experiencia/">Experiência</a>
+      <a href="../acomodacoes/">Acomodações</a>
+      <a href="../galeria/">Galeria</a>
+      <a href="../localizacao/">Localização</a>
+      <a href="../contato/">Contato</a>
+    </nav>
+    <a href="https://booking.hqbeds.com.br/montverde/rooms" class="hdr-btn">Reservar</a>
+    <button class="ham" id="ham" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mobnav" id="mobnav">
+  <a href="../sobre/" onclick="closeMob()">Sobre</a>
+  <a href="../experiencia/" onclick="closeMob()">Experiência</a>
+  <a href="../acomodacoes/" onclick="closeMob()">Acomodações</a>
+  <a href="../galeria/" onclick="closeMob()">Galeria</a>
+  <a href="../localizacao/" onclick="closeMob()">Localização</a>
+  <a href="../contato/" onclick="closeMob()">Contato</a>
+  <a href="https://booking.hqbeds.com.br/montverde/rooms" class="btn-gold" style="margin-top:1rem" onclick="closeMob()">Reservar Agora</a>
+</div>
+
+<div class="pg-hero">
+  <img src="../assets/img/quartos/casal.jpg" alt="Acomodações Pousada MontVerde" fetchpriority="high" class="loaded">
+  <div class="pg-hero-c">
+    <span class="overline">16 Unidades Habitacionais</span>
+    <h1>Acomodações</h1>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="sec-head c">
+      <p class="overline">Refúgio &amp; Conforto</p>
+      <h2>Encontre seu espaço ideal</h2>
+      <div class="divider cx"></div>
+      <p>Todos os quartos possuem ar-condicionado e banheiro privativo. Reserve pelo nosso motor online ou entre em contato pelo WhatsApp.</p>
+    </div>
+    <div class="fbr">
+      <button class="fbtn active" onclick="filterRooms('all',this)">Todos</button>
+      <button class="fbtn" onclick="filterRooms('casal',this)">Para Casais</button>
+      <button class="fbtn" onclick="filterRooms('familia',this)">Para Famílias</button>
+      <button class="fbtn" onclick="filterRooms('grupo',this)">Para Grupos</button>
+    </div>
+    <div class="rm-g" id="roomsGrid">
+      <div class="rc" data-type="casal">
+        <div class="rc-img"><img src="../assets/img/quartos/beliche-duplo.jpg" alt="Duplo Beliche" loading="lazy"><div class="rc-tag">2 pessoas</div></div>
+        <div class="rc-b"><h3>Duplo | Beliche</h3><p>Quarto com beliche para dois hóspedes. UHs 05 e 06.</p><div class="rc-feats"><span class="rc-feat">❄️ AC</span><span class="rc-feat">🚿 Banheiro privativo</span><span class="rc-feat">🛏️ Beliche</span></div><button class="rc-wa" onclick="openWAModal('Duplo Beliche')">💬 Consultar disponibilidade</button></div>
+      </div>
+      <div class="rc" data-type="casal">
+        <div class="rc-img"><img src="../assets/img/quartos/casal.jpg" alt="Duplo Casal" loading="lazy"><div class="rc-tag">Casal</div></div>
+        <div class="rc-b"><h3>Duplo | Cama Casal</h3><p>Quarto romântico para casais, algumas UHs com frigobar. UHs 01, 07 e 16.</p><div class="rc-feats"><span class="rc-feat">❄️ AC</span><span class="rc-feat">🚿 Banheiro privativo</span><span class="rc-feat">🛏️ Cama casal</span></div><button class="rc-wa" onclick="openWAModal('Duplo Casal')">💬 Consultar disponibilidade</button></div>
+      </div>
+      <div class="rc" data-type="casal">
+        <div class="rc-img"><img src="../assets/img/quartos/queen.jpg" alt="Duplo Queen" loading="lazy"><div class="rc-tag">⭐ Premium</div></div>
+        <div class="rc-b"><h3>Duplo | Cama Queen</h3><p>Nossa acomodação premium com TV, frigobar, armário e mesa. UHs 08 e 09.</p><div class="rc-feats"><span class="rc-feat">❄️ AC</span><span class="rc-feat">📺 TV</span><span class="rc-feat">🧊 Frigobar</span><span class="rc-feat">👗 Armário</span></div><button class="rc-wa" onclick="openWAModal('Duplo Queen')">💬 Consultar disponibilidade</button></div>
+      </div>
+      <div class="rc" data-type="familia">
+        <div class="rc-img"><img src="../assets/img/quartos/triplo-beliche.jpg" alt="Triplo Beliche" loading="lazy"><div class="rc-tag">3 pessoas</div></div>
+        <div class="rc-b"><h3>Triplo | Beliche (casal + solteiro)</h3><p>Para famílias de três. Parte das UHs com frigobar e armário. UHs 02, 03 e 13.</p><div class="rc-feats"><span class="rc-feat">❄️ AC</span><span class="rc-feat">🚿 Banheiro privativo</span><span class="rc-feat">🛏️ Casal + solteiro</span></div><button class="rc-wa" onclick="openWAModal('Triplo Beliche')">💬 Consultar disponibilidade</button></div>
+      </div>
+      <div class="rc" data-type="familia">
+        <div class="rc-img"><img src="../assets/img/quartos/triplo-casal.jpg" alt="Triplo Casal" loading="lazy"><div class="rc-tag">3 pessoas</div></div>
+        <div class="rc-b"><h3>Triplo | Casal + Solteiro</h3><p>Conforto para famílias com frigobar e criado-mudo. UH 12.</p><div class="rc-feats"><span class="rc-feat">❄️ AC</span><span class="rc-feat">🚿 Banheiro privativo</span><span class="rc-feat">🧊 Frigobar</span></div><button class="rc-wa" onclick="openWAModal('Triplo Casal + Solteiro')">💬 Consultar disponibilidade</button></div>
+      </div>
+      <div class="rc" data-type="familia">
+        <div class="rc-img"><img src="../assets/img/quartos/quadruplo-beliche.jpg" alt="Quádruplo Beliche" loading="lazy"><div class="rc-tag">4 pessoas</div></div>
+        <div class="rc-b"><h3>Quádruplo | Beliche + Box</h3><p>Com TV, frigobar, armário e mesa. Nosso quarto família completo. UH 04.</p><div class="rc-feats"><span class="rc-feat">❄️ AC</span><span class="rc-feat">📺 TV</span><span class="rc-feat">🧊 Frigobar</span><span class="rc-feat">🪑 Mesa</span></div><button class="rc-wa" onclick="openWAModal('Quádruplo Beliche')">💬 Consultar disponibilidade</button></div>
+      </div>
+      <div class="rc" data-type="familia">
+        <div class="rc-img"><img src="../assets/img/quartos/quadruplo-casal.jpg" alt="Quádruplo Casal" loading="lazy"><div class="rc-tag">4 pessoas</div></div>
+        <div class="rc-b"><h3>Quádruplo | Casal + 2 Solteiros</h3><p>Amplo espaço para famílias de quatro com criado-mudo. UH 14.</p><div class="rc-feats"><span class="rc-feat">❄️ AC</span><span class="rc-feat">🚿 Banheiro privativo</span><span class="rc-feat">🛏️ 3 camas</span></div><button class="rc-wa" onclick="openWAModal('Quádruplo 4')">💬 Consultar disponibilidade</button></div>
+      </div>
+      <div class="rc" data-type="grupo">
+        <div class="rc-img"><img src="../assets/img/quartos/sextuplo.jpg" alt="Sêxtuplo" loading="lazy"><div class="rc-tag">6 pessoas</div></div>
+        <div class="rc-b"><h3>Sêxtuplo | Beliches</h3><p>Ideal para grupos. Uma das unidades com frigobar. UHs 11 e 15.</p><div class="rc-feats"><span class="rc-feat">❄️ AC</span><span class="rc-feat">🚿 Banheiro privativo</span><span class="rc-feat">🛏️ 6 lugares</span></div><button class="rc-wa" onclick="openWAModal('Sêxtuplo')">💬 Consultar disponibilidade</button></div>
+      </div>
+      <div class="rc" data-type="grupo">
+        <div class="rc-img"><img src="../assets/img/quartos/octuplo.jpg" alt="Óctuplo" loading="lazy"><div class="rc-tag">8 pessoas</div></div>
+        <div class="rc-b"><h3>Óctuplo | Beliches</h3><p>Máxima capacidade com frigobar e criado-mudo. Para grandes grupos. UH 10.</p><div class="rc-feats"><span class="rc-feat">❄️ AC</span><span class="rc-feat">🚿 Banheiro privativo</span><span class="rc-feat">🧊 Frigobar</span><span class="rc-feat">🛏️ 8 lugares</span></div><button class="rc-wa" onclick="openWAModal('Óctuplo')">💬 Consultar disponibilidade</button></div>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:4rem;padding:3rem;background:var(--surface);box-shadow:var(--shadow)">
+      <p class="overline" style="text-align:center;display:block;margin:0 auto;text-align:center;display:block">Reserva Online — HQ Beds</p>
+      <h3 style="margin:.5rem 0 2rem;text-align:center">Verifique disponibilidade em tempo real</h3>
+      <div style="display:flex;justify-content:center">
+        <iframe src="https://admin.hqbeds.com.br/pt-br/hqb/2GLZMRDyqY/widget2?width=265&use_fluid_width=0&body_color=FFFFFF&body_text_color=000000&button_color=3c614f&button_text_color=ffffff" style="width:265px;height:500px;border:0" frameborder="0" title="HQ Beds"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="ft-grid">
+      <div class="ft-brand"><span class="logo">MontVerde</span><p>Refúgio verde no Itanhangá, Rio de Janeiro.</p></div>
+      <div class="ft-col"><h4>Navegação</h4><a href="../sobre/">Sobre</a>
+      <a href="../experiencia/">Experiência</a><a href="../acomodacoes/">Acomodações</a><a href="../galeria/">Galeria</a><a href="../localizacao/">Localização</a><a href="../contato/">Contato</a></div>
+      <div class="ft-col"><h4>Contato</h4><span>📞 (21) 99691-5036</span><span>✉️ contato@pousadamontverde.com</span><span>📍 R. Itália Fausta, 105 — Itanhangá, RJ</span></div>
+      <div class="ft-col"><h4>Estrutura</h4><span>🏊 Piscina</span><span>🧖 Sauna</span><span>🍖 Churrasqueira</span></div>
+    </div>
+    <div class="ft-bottom">
+      <p>CNPJ 63.165.135/0001-27 · © 2025 Pousada MontVerde</p>
+      <p>Desenvolvido por <a href="#" target="_blank">Komplexa Hotéis</a></p>
+    </div>
+  </div>
+</footer>
+
+<button class="wa-btn" onclick="openWAModal()" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></button>
+<div class="wa-modal" id="waModal">
+  <div class="wa-box">
+    <div class="wa-box-hdr"><h4>💬 Consultar Quarto</h4><button class="wa-close" onclick="closeWAModal()">×</button></div>
+    <form onsubmit="submitWAForm(event)">
+      <input type="hidden" id="wa-contexto" value="">
+      <div class="fg"><label>Seu nome *</label><input type="text" id="wa-nome" placeholder="Seu nome" required></div>
+      <div class="fg"><label>Telefone *</label><input type="tel" id="wa-tel" placeholder="(21) 99999-9999" required></div>
+      <div class="fg"><label>E-mail</label><input type="email" id="wa-email" placeholder="seu@email.com"></div>
+      <div class="fg"><label>Check-in</label><input type="date" id="wa-checkin"></div>
+      <div class="fg"><label>Check-out</label><input type="date" id="wa-checkout"></div>
+      <button type="submit" class="wa-submit">Abrir WhatsApp →</button>
+    </form>
+  </div>
+</div>
+<div class="discount-popup" id="discountPopup">
+  <div class="dp-box">
+    <button class="dp-close" onclick="closePopup()">×</button>
+    <div class="dp-content">
+      <p class="overline">Oferta exclusiva</p>
+      <h3>Reserve direto e<br><span class="dp-highlight">economize mais</span></h3>
+      <p class="dp-sub">Deixe seu contato e receba condições especiais.</p>
+      <form onsubmit="submitPopup(event)">
+        <div class="dp-field"><input type="text" id="popup-nome" placeholder="Seu nome" required></div>
+        <div class="dp-field"><input type="email" id="popup-email" placeholder="Seu e-mail" required></div>
+        <button type="submit" class="dp-btn">Quero as condições especiais →</button>
+      </form>
+      <p class="dp-disclaimer">Sem spam. <a href="#">Política de Privacidade</a>.</p>
+    </div>
+    <div class="dp-img"><img src="../assets/img/hero/fachada.jpg" alt="MontVerde" class="loaded"><div class="dp-img-ov"></div></div>
+  </div>
+</div>
+<div class="ck" id="cookieBanner">
+  <div class="ck-in">
+    <p>Utilizamos cookies. <a href="#">Política de Privacidade</a>.</p>
+    <div style="display:flex;gap:.6rem;flex-shrink:0">
+      <button class="btn-green" style="font-size:.72rem;padding:.5rem 1.2rem" onclick="acceptCookies()">Aceitar</button>
+      <button class="btn-outline" style="font-size:.72rem;padding:.5rem 1.2rem" onclick="declineCookies()">Recusar</button>
+    </div>
+  </div>
+</div>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Experiência — Pousada MontVerde | Piscina, Sauna, Churrasqueira no Itanhangá, RJ</title>
+<meta name="description" content="Descubra as experiências da Pousada MontVerde: piscina, sauna, churrasqueira, natureza e localização privilegiada no Itanhangá, Rio de Janeiro.">
+<meta property="og:title" content="Experiência | Pousada MontVerde — Itanhangá, RJ">
+<meta property="og:url" content="https://pousadamontverde.com.br/experiencia/">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- GTM HEAD -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MXDKKWH3');</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<style>
+/* ── EXPERIENCE PAGE SPECIFIC ── */
+.exp-intro { max-width:700px; margin:0 auto; text-align:center; }
+.exp-intro h2 { margin:.5rem 0 1rem; }
+.exp-intro p { margin:0 auto; font-size:1.05rem; }
+
+/* ── FEATURE BLOCK (imagem + texto lado a lado) ── */
+.feat-block { display:grid; grid-template-columns:1fr 1fr; gap:clamp(3rem,6vw,6rem); align-items:center; margin-bottom:clamp(5rem,10vw,8rem); }
+.feat-block.reverse { direction:rtl; }
+.feat-block.reverse > * { direction:ltr; }
+.feat-img { position:relative; overflow:hidden; aspect-ratio:4/3; }
+.feat-img img { width:100%; height:100%; object-fit:cover; transition:transform .5s; opacity:1; }
+.feat-img:hover img { transform:scale(1.04); }
+.feat-txt { display:flex; flex-direction:column; gap:.9rem; }
+.feat-tag { display:inline-flex; align-items:center; gap:.5rem; font-family:var(--font-body); font-size:.68rem; letter-spacing:.2em; text-transform:uppercase; color:var(--cta); font-weight:700; }
+.feat-tag span { font-size:1.3rem; }
+.feat-txt h2 { margin:.2rem 0; }
+.feat-txt p { font-size:.96rem; }
+.feat-list { list-style:none; display:flex; flex-direction:column; gap:.5rem; margin-top:.3rem; }
+.feat-list li { display:flex; align-items:flex-start; gap:.6rem; font-size:.88rem; color:var(--text-muted); line-height:1.6; }
+.feat-list li::before { content:'—'; color:var(--cta); flex-shrink:0; margin-top:.05rem; }
+
+/* ── TEXT-ONLY CARD (sem foto) ── */
+.txt-block { background:var(--surface); border-left:4px solid var(--accent); padding:2.5rem 2.5rem 2.5rem 2rem; box-shadow:var(--shadow); display:grid; grid-template-columns:1fr 1fr; gap:clamp(2rem,5vw,4rem); align-items:start; margin-bottom:clamp(5rem,10vw,8rem); }
+.txt-block-icon { font-size:3.5rem; line-height:1; margin-bottom:1rem; display:block; }
+.txt-block-tag { display:flex; align-items:center; gap:.5rem; font-family:var(--font-body); font-size:.68rem; letter-spacing:.2em; text-transform:uppercase; color:var(--cta); font-weight:700; margin-bottom:.6rem; }
+.txt-block h2 { margin:.2rem 0 .8rem; font-size:clamp(1.8rem,4vw,3rem); }
+.txt-block p { font-size:.95rem; }
+.txt-block-cols { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin-top:1rem; }
+.txt-item { background:var(--surface-light); padding:1.2rem; border-top:2px solid var(--accent); }
+.txt-item h4 { font-size:.75rem; letter-spacing:.1em; margin-bottom:.4rem; color:var(--text); }
+.txt-item p { font-size:.82rem; max-width:100%; line-height:1.65; }
+
+/* ── MAP CARD ── */
+.map-block { margin-bottom:clamp(5rem,10vw,8rem); }
+.map-grid { display:grid; grid-template-columns:1fr 1fr; gap:clamp(2.5rem,5vw,4rem); align-items:start; }
+.map-embed { background:var(--surface-light); overflow:hidden; aspect-ratio:4/3; position:relative; }
+.map-embed iframe { width:100%; height:100%; border:0; display:block; }
+.map-list { display:flex; flex-direction:column; gap:1rem; }
+.map-item { display:flex; gap:1rem; align-items:flex-start; padding:1rem 1.2rem; background:var(--surface); box-shadow:var(--shadow); border-left:3px solid var(--accent); }
+.map-icon { font-size:1.4rem; flex-shrink:0; margin-top:.1rem; }
+.map-item h4 { font-size:.75rem; letter-spacing:.06em; color:var(--text); margin-bottom:.2rem; }
+.map-item p { font-size:.82rem; max-width:100%; line-height:1.55; margin:0; }
+
+/* ── FOTOS GRID 4 ── */
+.area-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:1rem; margin-top:3rem; }
+.area-grid img { width:100%; aspect-ratio:4/3; object-fit:cover; opacity:1; transition:transform .4s; }
+.area-grid img:hover { transform:scale(1.03); }
+
+/* MOBILE */
+@media(max-width:768px){
+  .feat-block,.feat-block.reverse { grid-template-columns:1fr; direction:ltr; }
+  .txt-block { grid-template-columns:1fr; }
+  .txt-block-cols { grid-template-columns:1fr; }
+  .map-grid { grid-template-columns:1fr; }
+  .area-grid { grid-template-columns:1fr 1fr; }
+}
+@media(max-width:480px){
+  .area-grid { grid-template-columns:1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- GTM BODY -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MXDKKWH3" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- HEADER -->
+<header class="hdr solid" id="hdr">
+  <div class="hdr-inner">
+    <a href="../index.html" class="logo">MontVerde</a>
+    <nav class="nav desktop-nav">
+      <a href="../sobre/">Sobre</a>
+      <a href="../experiencia/" style="color:var(--cta)">Experiência</a>
+      <a href="../acomodacoes/">Acomodações</a>
+      <a href="../galeria/">Galeria</a>
+      <a href="../localizacao/">Localização</a>
+      <a href="../contato/">Contato</a>
+    </nav>
+    <a href="https://booking.hqbeds.com.br/montverde/rooms" target="_blank" class="hdr-btn">Reservar</a>
+    <button class="ham" id="ham" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobnav" id="mobnav">
+  <a href="../sobre/" onclick="closeMob()">Sobre</a>
+  <a href="../experiencia/" onclick="closeMob()">Experiência</a>
+  <a href="../acomodacoes/" onclick="closeMob()">Acomodações</a>
+  <a href="../galeria/" onclick="closeMob()">Galeria</a>
+  <a href="../localizacao/" onclick="closeMob()">Localização</a>
+  <a href="../contato/" onclick="closeMob()">Contato</a>
+  <a href="https://booking.hqbeds.com.br/montverde/rooms" target="_blank" class="btn-gold" style="margin-top:1rem" onclick="closeMob()">Reservar Agora</a>
+</div>
+
+<!-- PAGE HERO -->
+<div class="pg-hero">
+  <img src="../assets/img/hero/fachada.jpg" alt="Experiência — Pousada MontVerde" class="loaded">
+  <div class="pg-hero-c">
+    <span class="overline">Bem-estar & Natureza</span>
+    <h1>A Experiência MontVerde</h1>
+  </div>
+</div>
+
+<!-- INTRO -->
+<section>
+  <div class="container">
+    <div class="exp-intro">
+      <p class="overline">O que nos diferencia</p>
+      <h2>Mais do que uma hospedagem</h2>
+      <div class="divider cx"></div>
+      <p>Na MontVerde, cada detalhe foi pensado para que sua estadia seja uma experiência completa — do lazer ao descanso, da natureza à conveniência urbana do Rio de Janeiro.</p>
+    </div>
+
+    <!-- FOTOS DA ÁREA -->
+    <div class="area-grid" style="margin-top:3.5rem">
+      <img src="../assets/img/sobre/area-01.jpg" alt="Área externa — Pousada MontVerde">
+      <img src="../assets/img/sobre/area-02.jpg" alt="Área comum — Pousada MontVerde">
+      <img src="../assets/img/sobre/area-03.jpg" alt="Área de lazer — Pousada MontVerde">
+      <img src="../assets/img/sobre/area-04.jpg" alt="Jardim — Pousada MontVerde">
+    </div>
+  </div>
+</section>
+
+<!-- PISCINA — texto (sem foto específica) -->
+<section style="background:var(--surface-light)">
+  <div class="container">
+    <div class="txt-block">
+      <div>
+        <span class="txt-block-icon">🏊</span>
+        <div class="txt-block-tag">Lazer & Relaxamento</div>
+        <h2>Piscina</h2>
+        <p>Mergulhe em tranquilidade. Nossa piscina é o ponto de encontro ideal para descansar depois de um dia explorando o Rio de Janeiro — seja tomando sol, nadando ou simplesmente contemplando a natureza ao redor.</p>
+        <p style="margin-top:.8rem">Um espaço aberto, amplo e seguro para todas as idades.</p>
+      </div>
+      <div class="txt-block-cols">
+        <div class="txt-item">
+          <h4>🌤️ Uso livre</h4>
+          <p>Disponível para todos os hóspedes durante a estadia.</p>
+        </div>
+        <div class="txt-item">
+          <h4>👨‍👩‍👧 Apta para famílias</h4>
+          <p>Espaço seguro e supervisionado para crianças e adultos.</p>
+        </div>
+        <div class="txt-item">
+          <h4>🌿 Entorno verde</h4>
+          <p>Rodeada de vegetação nativa — uma pausa na natureza.</p>
+        </div>
+        <div class="txt-item">
+          <h4>☀️ Horário amplo</h4>
+          <p>Disponível das 8h às 22h para o conforto de todos.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SAUNA — com foto -->
+<section>
+  <div class="container">
+    <div class="feat-block">
+      <div class="feat-img">
+        <img src="../assets/img/sobre/sauna.jpg" alt="Sauna — Pousada MontVerde">
+      </div>
+      <div class="feat-txt">
+        <div class="feat-tag"><span>🧖</span> Bem-estar</div>
+        <h2>Sauna</h2>
+        <div class="divider" style="margin:.5rem 0"></div>
+        <p>Renove as energias com uma sessão na nossa sauna. O calor seco alivia tensões musculares, melhora a circulação e proporciona aquele relaxamento profundo que você merece após um dia cheio.</p>
+        <ul class="feat-list">
+          <li>Sessões disponíveis para hóspedes mediante agendamento</li>
+          <li>Ideal para recuperação após trilhas e passeios</li>
+          <li>Ambiente limpo, privativo e bem ventilado</li>
+          <li>Recomendada para quem busca bem-estar e desintoxicação</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHURRASQUEIRA — com foto -->
+<section style="background:var(--surface-light)">
+  <div class="container">
+    <div class="feat-block reverse">
+      <div class="feat-img">
+        <img src="../assets/img/sobre/churrasqueira.jpg" alt="Churrasqueira — Pousada MontVerde">
+      </div>
+      <div class="feat-txt">
+        <div class="feat-tag"><span>🔥</span> Gastronomia & Convívio</div>
+        <h2>Churrasqueira</h2>
+        <div class="divider" style="margin:.5rem 0"></div>
+        <p>Nossa área de churrasqueira foi feita para reunir pessoas. Um espaço amplo e bem equipado para que grupos, famílias e amigos celebrem bons momentos com o sabor inconfundível de um bom churrasco.</p>
+        <ul class="feat-list">
+          <li>Disponível para uso dos hóspedes mediante reserva</li>
+          <li>Área coberta e protegida para dias nublados</li>
+          <li>Ideal para grupos, aniversários e comemorações</li>
+          <li>Mesas e cadeiras para acomodar grupos maiores</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEGURANÇA — texto -->
+<section>
+  <div class="container">
+    <div class="txt-block">
+      <div>
+        <span class="txt-block-icon">🔐</span>
+        <div class="txt-block-tag">Tranquilidade & Privacidade</div>
+        <h2>Segurança</h2>
+        <p>Aqui você pode descansar de verdade. A Pousada MontVerde é um ambiente controlado, com acesso restrito e monitoramento constante — para que você e sua família tenham total tranquilidade durante a estadia.</p>
+        <p style="margin-top:.8rem">Um dos poucos refúgios dentro do Rio de Janeiro onde segurança e natureza convivem em harmonia.</p>
+      </div>
+      <div class="txt-block-cols">
+        <div class="txt-item">
+          <h4>🚪 Acesso controlado</h4>
+          <p>Entrada exclusiva para hóspedes e visitantes autorizados.</p>
+        </div>
+        <div class="txt-item">
+          <h4>📹 Monitoramento</h4>
+          <p>Câmeras de segurança em áreas comuns 24 horas.</p>
+        </div>
+        <div class="txt-item">
+          <h4>🌙 Noite tranquila</h4>
+          <p>Ambiente silencioso, sem trânsito intenso na rua.</p>
+        </div>
+        <div class="txt-item">
+          <h4>👨‍👩‍👧 Ideal para famílias</h4>
+          <p>Crianças podem brincar com liberdade e segurança.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCALIZAÇÃO — mapa + lista -->
+<section style="background:var(--surface-light)">
+  <div class="container map-block">
+    <div class="sec-head">
+      <p class="overline">A melhor base no Rio</p>
+      <h2>Localização Privilegiada</h2>
+      <div class="divider" style="margin:.8rem 0"></div>
+      <p>O Itanhangá é um dos bairros mais tranquilos da Zona Oeste — verde, seguro e estrategicamente posicionado entre a Barra e a Floresta da Tijuca. Da MontVerde você chega rápido em qualquer ponto do Rio.</p>
+    </div>
+    <div class="map-grid">
+      <div class="map-embed">
+        <iframe
+          src="https://maps.google.com/maps?q=R.+It%C3%A1lia+Fausta+105+Itanh%C3%A3ng%C3%A1+Rio+de+Janeiro&output=embed"
+          allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="Mapa — Pousada MontVerde">
+        </iframe>
+      </div>
+      <div class="map-list">
+        <div class="map-item">
+          <span class="map-icon">🏖️</span>
+          <div><h4>Praia da Barra da Tijuca</h4><p>~10 min de carro — a mais famosa praia da Zona Oeste do Rio.</p></div>
+        </div>
+        <div class="map-item">
+          <span class="map-icon">🏟️</span>
+          <div><h4>Parque Olímpico</h4><p>~8 min — legado dos Jogos 2016, com arena, museu e atrações.</p></div>
+        </div>
+        <div class="map-item">
+          <span class="map-icon">🏢</span>
+          <div><h4>RioCentro</h4><p>~10 min — maior centro de convenções da América Latina.</p></div>
+        </div>
+        <div class="map-item">
+          <span class="map-icon">🌿</span>
+          <div><h4>Floresta da Tijuca</h4><p>~15 min — maior floresta urbana do mundo, com trilhas e cachoeiras.</p></div>
+        </div>
+        <div class="map-item">
+          <span class="map-icon">⛳</span>
+          <div><h4>Itanhangá Golf Club</h4><p>A poucos metros — clube histórico e referência no bairro.</p></div>
+        </div>
+        <div class="map-item">
+          <span class="map-icon">🛍️</span>
+          <div><h4>BarraShopping / Via Parque</h4><p>~15 min — opções de compras, gastronomia e lazer.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NATUREZA — texto -->
+<section>
+  <div class="container">
+    <div class="txt-block">
+      <div>
+        <span class="txt-block-icon">🌿</span>
+        <div class="txt-block-tag">Verde & Bem-estar</div>
+        <h2>Natureza Urbana</h2>
+        <p>A MontVerde fica no Itanhangá, um bairro que preserva a mata atlântica original do Rio de Janeiro. Aqui a natureza não é cenário — ela faz parte do dia a dia, com pássaros, aromas de floresta e uma qualidade de ar incomparável.</p>
+        <p style="margin-top:.8rem">Você está dentro de uma das maiores cidades do Brasil e, ao mesmo tempo, completamente imerso na natureza.</p>
+      </div>
+      <div class="txt-block-cols">
+        <div class="txt-item">
+          <h4>🦜 Fauna nativa</h4>
+          <p>Pássaros, borboletas e vida silvestre visíveis do jardim da pousada.</p>
+        </div>
+        <div class="txt-item">
+          <h4>🌳 Mata Atlântica</h4>
+          <p>Área de preservação ao redor, com vegetação densa e nativa.</p>
+        </div>
+        <div class="txt-item">
+          <h4>🧘 Ar puro</h4>
+          <p>Temperatura até 5°C mais amena que o Centro e a Zona Sul do Rio.</p>
+        </div>
+        <div class="txt-item">
+          <h4>🥾 Trilhas próximas</h4>
+          <p>Pedra da Gávea, Pedra Bonita e trilhas da Tijuca a poucos minutos.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="background:var(--accent);padding:clamp(4rem,8vw,6rem) 0">
+  <div class="container" style="text-align:center">
+    <p class="overline" style="color:rgba(255,255,255,.7);text-align:center;display:block;margin:0 auto">Viva essa experiência</p>
+    <h2 style="color:#fff;margin:.6rem auto 1rem;text-align:center">Reserve sua estadia agora</h2>
+    <div class="divider cx" style="background:rgba(255,255,255,.5)"></div>
+    <p style="color:rgba(255,255,255,.8);margin:.8rem auto 2rem;max-width:50ch">Tudo isso espera por você no Itanhangá. Fale com a gente ou reserve diretamente.</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+      <a href="../contato/" class="btn-outline-w">Fale Conosco</a>
+      <a href="https://booking.hqbeds.com.br/montverde/rooms" target="_blank" class="btn-gold">Reservar Agora</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="ft-grid">
+      <div class="ft-brand">
+        <a href="../index.html" class="ft-logo logo">MontVerde</a>
+        <p>R. Itália Fausta, 105 — Itanhangá<br>Rio de Janeiro — RJ, 22641-440</p>
+        <p style="margin-top:.5rem">CNPJ: 63.165.135/0001-27</p>
+      </div>
+      <div class="ft-col"><h4>Páginas</h4><a href="../sobre/">Sobre</a><a href="../experiencia/">Experiência</a><a href="../acomodacoes/">Acomodações</a><a href="../galeria/">Galeria</a><a href="../localizacao/">Localização</a><a href="../contato/">Contato</a></div>
+      <div class="ft-col"><h4>Experiências</h4><span>Piscina</span><span>Sauna</span><span>Churrasqueira</span><span>Natureza</span></div>
+      <div class="ft-col"><h4>Contato</h4><span>+55 (21) 99691-5036</span><a href="mailto:contato@pousadamontverde.com">contato@pousadamontverde.com</a><a href="https://instagram.com/pousada_montverde" target="_blank" rel="noopener">@pousada_montverde</a></div>
+    </div>
+    <div class="ft-bottom">
+      <p>© 2025 Pousada MontVerde. Todos os direitos reservados.</p>
+      <p>Desenvolvido por <a href="#">Komplexa Hotéis</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- WA BUTTON -->
+<button class="wa-btn" id="waBtn" onclick="openWAModal()" aria-label="WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</button>
+
+<!-- WA MODAL -->
+<div class="wa-modal" id="waModal">
+  <div class="wa-box">
+    <div class="wa-box-hdr">
+      <h4>Fale pelo WhatsApp</h4>
+      <button onclick="closeWAModal()" style="background:none;border:none;font-size:1.4rem;cursor:pointer;color:var(--text-muted)">×</button>
+    </div>
+    <form id="waForm" onsubmit="submitWAForm(event)">
+      <div class="fg" style="margin-bottom:.7rem"><label style="font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;display:block;margin-bottom:.25rem">Nome *</label><input type="text" id="wa-nome" placeholder="Nome completo" required style="width:100%;background:var(--surface-light);border:1px solid var(--border);padding:.55rem .8rem;font-family:var(--font-body);font-size:.88rem;outline:none;color:var(--text)"></div>
+      <div class="fg" style="margin-bottom:.7rem"><label style="font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;display:block;margin-bottom:.25rem">E-mail *</label><input type="email" id="wa-email" placeholder="seu@email.com" required style="width:100%;background:var(--surface-light);border:1px solid var(--border);padding:.55rem .8rem;font-family:var(--font-body);font-size:.88rem;outline:none;color:var(--text)"></div>
+      <div class="fg" style="margin-bottom:.7rem"><label style="font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;display:block;margin-bottom:.25rem">Telefone *</label><input type="tel" id="wa-tel" placeholder="(21) 99999-9999" required style="width:100%;background:var(--surface-light);border:1px solid var(--border);padding:.55rem .8rem;font-family:var(--font-body);font-size:.88rem;outline:none;color:var(--text)"></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:.5rem;margin-bottom:.7rem">
+        <div><label style="font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;display:block;margin-bottom:.25rem">Check-in</label><input type="date" id="wa-in" style="width:100%;background:var(--surface-light);border:1px solid var(--border);padding:.55rem .8rem;font-family:var(--font-body);font-size:.88rem;outline:none;color:var(--text)"></div>
+        <div><label style="font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;display:block;margin-bottom:.25rem">Check-out</label><input type="date" id="wa-out" style="width:100%;background:var(--surface-light);border:1px solid var(--border);padding:.55rem .8rem;font-family:var(--font-body);font-size:.88rem;outline:none;color:var(--text)"></div>
+      </div>
+      <button type="submit" class="wa-submit">Ir para o WhatsApp</button>
+    </form>
+  </div>
+</div>
+
+<!-- POPUP DESCONTO -->
+<div class="discount-popup" id="discountPopup">
+  <div class="dp-box">
+    <button class="dp-close" onclick="closePopup()">×</button>
+    <div class="dp-content">
+      <p class="overline" style="color:var(--cta)">Oferta Exclusiva</p>
+      <h3>Você ganhou<br><span class="dp-highlight">10% de desconto</span></h3>
+      <p class="dp-sub">Reserve diretamente e aproveite seu benefício exclusivo.</p>
+      <form id="popupForm" onsubmit="submitPopup(event)">
+        <div class="dp-field"><input type="email" id="popup-email" placeholder="Seu melhor e-mail" required></div>
+        <button type="submit" class="dp-btn">Eu Quero! →</button>
+      </form>
+      <p class="dp-disclaimer">Ao se cadastrar você concorda com nossa <a href="#">Política de Privacidade</a>.</p>
+    </div>
+    <div class="dp-img">
+      <img src="../assets/img/hero/fachada.jpg" alt="Pousada MontVerde" class="loaded">
+      <div class="dp-img-ov"></div>
+    </div>
+  </div>
+</div>
+
+<!-- COOKIE BANNER -->
+<div class="ck" id="cookieBanner">
+  <div class="ck-in">
+    <p>Utilizamos cookies para melhorar sua experiência. Ao continuar, você concorda com nossa <a href="#">Política de Privacidade</a>.</p>
+    <div style="display:flex;gap:.6rem;flex-shrink:0">
+      <button class="btn-gold" style="font-size:.76rem;padding:.5rem 1.2rem" onclick="acceptCookies()">Aceitar</button>
+      <button class="btn-outline" style="font-size:.76rem;padding:.5rem 1.2rem" onclick="declineCookies()">Recusar</button>
+    </div>
+  </div>
+</div>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
