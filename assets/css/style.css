@@ -379,3 +379,15 @@ footer { background:var(--text); color:rgba(255,255,255,.8); padding:clamp(4rem,
   .wa-modal.open { padding:0 1rem 5rem 1rem; align-items:flex-end; justify-content:center; }
   .wa-box,.wa-modal-box { width:100%!important; max-width:420px; }
 }
+
+/* ── LOGOTIPO ── */
+.logo-img {
+  height: 48px;
+  width: auto;
+  display: block;
+  filter: brightness(0) invert(1); /* deixa a logo branca no hero */
+  transition: filter .3s;
+}
+.hdr.solid .logo-img {
+  filter: none; /* logo colorida quando o header fica sólido */
+}
