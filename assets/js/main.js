@@ -120,6 +120,15 @@ function filterRooms(type, btn) {
   });
 }
 
+// ── FILTRO GALERIA ──
+function filterGal(cat, btn) {
+  document.querySelectorAll('.fbtn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.gi').forEach(item => {
+    item.style.display = (cat === 'all' || item.dataset.cat === cat) ? '' : 'none';
+  });
+}
+
 // ── LIGHTBOX ──
 let lbCur = 0; const LB_SRCS = [];
 function openLB(i) {
