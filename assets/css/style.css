@@ -116,13 +116,13 @@ img.loaded { opacity:1; }
 .hero { position:relative; height:100vh; min-height:600px; display:flex; flex-direction:column; align-items:center; justify-content:center; overflow:hidden; }
 .hero-bg { position:absolute; inset:0; }
 .hero-bg img { width:100%; height:100%; object-fit:cover; opacity:1; }
-.hero-ov { position:absolute; inset:0; background:linear-gradient(to bottom,rgba(35,37,22,.38) 0%,rgba(35,37,22,.08) 45%,rgba(35,37,22,.68) 100%); }
-.hero-c { position:relative; z-index:2; display:flex; flex-direction:column; align-items:center; text-align:center; padding:0 clamp(1.5rem,4vw,3rem); width:100%; }
-.hero-overline { font-family:var(--font-body); font-size:.72rem; letter-spacing:.28em; text-transform:uppercase; color:rgba(255,255,255,.78); font-weight:600; display:block; margin-bottom:1.4rem; }
+.hero-ov { position:absolute; inset:0; background:linear-gradient(to bottom,rgba(20,24,14,.25) 0%,rgba(20,24,14,.45) 40%,rgba(20,24,14,.72) 100%); }
+.hero-c { position:relative; z-index:2; display:flex; flex-direction:column; align-items:center; text-align:center; padding:0 clamp(1.5rem,4vw,3rem); width:100%; gap:clamp(1.4rem,3vh,2.2rem); }
+.hero-overline { font-family:var(--font-body); font-size:.72rem; letter-spacing:.28em; text-transform:uppercase; color:rgba(255,255,255,.78); font-weight:600; display:block; margin:0; }
 .hero-title { font-family:var(--font-display); font-size:clamp(4.5rem,12vw,9rem); font-weight:400; line-height:1; color:#fff; margin:0; }
-.hero-divider { width:50px; height:1.5px; background:var(--cta); margin:1.8rem auto; }
-.hero-sub { font-family:var(--font-body); font-size:clamp(1rem,1.6vw,1.25rem); color:rgba(255,255,255,.9); letter-spacing:.05em; font-weight:300; margin:0 0 3rem; }
-.hero-ctas { display:flex; gap:1.2rem; justify-content:center; flex-wrap:wrap; }
+.hero-divider { width:50px; height:1.5px; background:var(--cta); margin:0; display:none; }
+.hero-sub { font-family:var(--font-body); font-size:clamp(1rem,1.6vw,1.25rem); color:rgba(255,255,255,.92); letter-spacing:.05em; font-weight:300; margin:0; }
+.hero-ctas { display:flex; gap:1.2rem; justify-content:center; flex-wrap:wrap; margin:0; }
 .hero-scroll { position:absolute; bottom:2.5rem; left:50%; transform:translateX(-50%); z-index:2; display:flex; flex-direction:column; align-items:center; gap:.6rem; color:rgba(255,255,255,.6); text-decoration:none; transition:color .3s; }
 .hero-scroll:hover { color:rgba(255,255,255,.95); }
 .hero-scroll-label { font-family:var(--font-body); font-size:.62rem; letter-spacing:.22em; text-transform:uppercase; }
