@@ -62,8 +62,8 @@ async function submitWAForm(e) {
 
 // ── POPUP DESCONTO ──
 const popup = document.getElementById('discountPopup');
-if (popup && !localStorage.getItem('dp_shown')) {
-  setTimeout(() => { popup.classList.add('open'); localStorage.setItem('dp_shown','1'); }, 5000);
+if (popup && !sessionStorage.getItem('dp_shown')) {
+  setTimeout(() => { popup.classList.add('open'); sessionStorage.setItem('dp_shown','1'); }, 5000);
 }
 function closePopup() { popup?.classList.remove('open'); }
 async function submitPopup(e) {
@@ -115,3 +115,14 @@ async function submitContact(e) {
   await sendToWebhook({ tipo:'contato', ...data });
   form.reset(); document.getElementById('contactOk')?.classList.add('show');
 }
+
+// Título original
+const tituloOriginal = document.title;
+
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) {
+    document.title = '👋 Volte Aqui — Estamos te esperando!';
+  } else {
+    document.title = tituloOriginal;
+  }
+});
