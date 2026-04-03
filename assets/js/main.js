@@ -1,5 +1,5 @@
 /* ============================================================
-   POUSADA MONTVERDE — main.js v2 (sem GSAP/Lenis)
+   POUSADA MONTVERDE — main.js v3
    Komplexa Hotéis
    ============================================================ */
 
@@ -7,11 +7,29 @@ const WEBHOOK_URL = 'https://webhook.cidigitalmarketing.com/webhook/795f27d1-f87
 const WA_NUMBER   = '5521996915036';
 const HOTEL_NAME  = 'Pousada MontVerde';
 
+// ── dataLayer GTM ──
+window.dataLayer = window.dataLayer || [];
+function pushLead(tipo) {
+  window.dataLayer.push({
+    event:      'gerar_lead',
+    lead_tipo:  tipo,
+    pagina:     document.title,
+    url:        location.href
+  });
+}
+
+// ── WEBHOOK ──
 async function sendToWebhook(payload) {
   try {
     await fetch(WEBHOOK_URL, {
       method: 'POST', headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ hotel: HOTEL_NAME, origem_pagina: document.title, url: location.href, timestamp: new Date().toISOString(), ...payload })
+      body: JSON.stringify({
+        hotel: HOTEL_NAME,
+        origem_pagina: document.title,
+        url: location.href,
+        timestamp: new Date().toISOString(),
+        ...payload
+      })
     });
   } catch(e) { console.warn('Webhook:', e); }
 }
@@ -38,7 +56,11 @@ const imgObs = new IntersectionObserver((entries) => {
 }, { rootMargin: '200px' });
 document.querySelectorAll('img').forEach(img => {
   if (img.complete && img.naturalWidth > 0) img.classList.add('loaded');
-  else { img.addEventListener('load', () => img.classList.add('loaded'), {once:true}); img.addEventListener('error', () => img.classList.add('loaded'), {once:true}); imgObs.observe(img); }
+  else {
+    img.addEventListener('load',  () => img.classList.add('loaded'), {once:true});
+    img.addEventListener('error', () => img.classList.add('loaded'), {once:true});
+    imgObs.observe(img);
+  }
 });
 
 // ── WHATSAPP MODAL ──
@@ -54,21 +76,31 @@ async function submitWAForm(e) {
   const tel      = document.getElementById('wa-tel')?.value   || '';
   const checkin  = (document.getElementById('wa-in')  || document.getElementById('wa-checkin'))?.value  || '';
   const checkout = (document.getElementById('wa-out') || document.getElementById('wa-checkout'))?.value || '';
+
+  // GTM
+  pushLead('whatsapp_modal');
+
   await sendToWebhook({ tipo: 'whatsapp_lead', nome, email, telefone: tel, checkin, checkout });
   const msg = encodeURIComponent(`Olá, Pousada MontVerde! 🌿\nMeu nome é ${nome}.\nCheck-in: ${checkin}\nCheck-out: ${checkout}\nGostaria de informações sobre hospedagem.`);
   window.open(`https://wa.me/${WA_NUMBER}?text=${msg}`, '_blank');
   closeWAModal();
 }
 
-// ── POPUP DESCONTO ──
+// ── POPUP DESCONTO (uma vez por sessão) ──
 const popup = document.getElementById('discountPopup');
-if (popup && !sessionStorage.getItem('dp_shown')) {
-  setTimeout(() => { popup.classList.add('open'); sessionStorage.setItem('dp_shown','1'); }, 5000);
+if (popup && !sessionStorage.getItem('mv_popup')) {
+  setTimeout(() => { popup.classList.add('open'); }, 5000);
 }
-function closePopup() { popup?.classList.remove('open'); }
+function closePopup() { popup?.classList.remove('open'); sessionStorage.setItem('mv_popup','1'); }
+
 async function submitPopup(e) {
   e.preventDefault();
-  await sendToWebhook({ tipo: 'lead_popup', email: document.getElementById('popup-email')?.value || '' });
+  const email = document.getElementById('popup-email')?.value || '';
+
+  // GTM
+  pushLead('popup_desconto');
+
+  await sendToWebhook({ tipo: 'lead_popup', email });
   closePopup();
 }
 popup?.addEventListener('click', e => { if (e.target === popup) closePopup(); });
@@ -111,18 +143,21 @@ document.addEventListener('keydown', e => {
 // ── FORMULÁRIO CONTATO ──
 async function submitContact(e) {
   e.preventDefault();
-  const form=e.target; const data=Object.fromEntries(new FormData(form));
-  await sendToWebhook({ tipo:'contato', ...data });
-  form.reset(); document.getElementById('contactOk')?.classList.add('show');
+  const form = e.target;
+  const data = Object.fromEntries(new FormData(form));
+
+  // GTM
+  pushLead('formulario_contato');
+
+  await sendToWebhook({ tipo: 'contato', ...data });
+  form.reset();
+  document.getElementById('contactOk')?.classList.add('show');
 }
 
-// Título original
+// ── TÍTULO DA ABA ao sair da página ──
 const tituloOriginal = document.title;
-
 document.addEventListener('visibilitychange', () => {
-  if (document.hidden) {
-    document.title = '👋 Volte Aqui — Estamos te esperando!';
-  } else {
-    document.title = tituloOriginal;
-  }
+  document.title = document.hidden
+    ? '👋 Volte Aqui — Estamos te esperando!'
+    : tituloOriginal;
 });
