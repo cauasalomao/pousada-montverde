@@ -3,7 +3,7 @@
    Komplexa Hotéis
    ============================================================ */
 
-const WEBHOOK_URL = 'https://webhook.cidigitalmarketing.com/webhook/795f27d1-f878-4a73-8233-d3663db6d7a7';
+const WEBHOOK_URL = 'https://webhook.cidigitalmarketing.com/webhook/7c87bd71-6c33-437f-9073-2fae80d76d2f;
 const WA_NUMBER   = '5521996915036';
 const HOTEL_NAME  = 'Pousada MontVerde';
 
